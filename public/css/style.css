@@ -7,6 +7,9 @@ body {
     height: 100vh;
     background-color:#FB6B6B;
     border: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
  
 .root {
@@ -34,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 41px;
+    
 }
 
 .box{
