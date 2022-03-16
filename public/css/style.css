@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
+  }
+  
+body {
+    height: 100vh;
+    background-color:#FB6B6B;
+    border: 1px solid #DBDBDB;
+}
+ 
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicial-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo {
+    font-family: 'Righteous';
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.box{
+    width: 141px;
+    height: 25px;
+    margin-bottom: 6px;
+    background: #FFFFFF;
+}
+
+.choose-deck {
+    border: none;
+    border-radius: 5px;
+    font-size: 9px;
+    color: #ADADAD;
+}
+
+.goal-input {
+    border: none;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
+.init-button {
+    height: 31px;
+    width: 141px;
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-size: 12px;
+    color: #D70900;
+    line-height: 14px;
+    text-align: center;
+    margin-top: 18px;
+}
