@@ -160,13 +160,32 @@ body {
 }
 
 .card-side {
+    position: relative;
+    display: flex;
     height: 131px;
     width: 300px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.card-side p{
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 .setinha {
+    position: absolute;
     cursor: pointer;
+    height: 10px;
+    width: 20px;
+    bottom: 10px;
+    right: 15px;
 }

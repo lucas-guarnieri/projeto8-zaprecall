@@ -29,7 +29,7 @@ export default function Question(props){
 
     function QuestionCardSide(props){
         return(
-            props.face === "question" ? (<QuestionSide question={props.question} setFace={props.setFace}/>) : (<QuestionSide question={props.question} setFace={props.setFace}/>)
+            props.face === "question" ? (<QuestionSide question={props.question} setFace={props.setFace}/>) : (<AnswerSide face={props.face} answer={props.answer} setColor={props.setColor} setFace={props.setFace} setTurned={props.setTurned}/>)
         );
     }
 
@@ -42,6 +42,13 @@ export default function Question(props){
         );
     }
 
+    function AnswerSide(props){
+        return(
+            <div className="answer-card-side card-side">
+                <p>{props.answer}</p>
+            </div>
+        );
+    }
 
     return (
         <div className="question">
