@@ -23,4 +23,10 @@ export default function QuestionsBox(props){
         {question:"7x7", answer: "49"}
         ]
     ]
+
+    return(
+        <div className="questions-box">
+            {deck[0].map((card) => <Question question={card.question} answer={card.answer} />)}
+        </div>
+    );
 };
