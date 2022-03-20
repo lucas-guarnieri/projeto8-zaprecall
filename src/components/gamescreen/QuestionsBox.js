@@ -1,8 +1,11 @@
 import Question from "./Question";
 
 
+
 export default function QuestionsBox(props){
-    const {choosenDeck, goal} = props;
+    const {choosenDeck} = props;
+     
+    
     let deck = [
         [{question:"O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
         {question:"O React é __ ",  answer:"Uma biblioteca JavaScript para construção de interfaces"},
@@ -26,7 +29,7 @@ export default function QuestionsBox(props){
 
     return(
         <div className="questions-box">
-            {deck[0].map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} />)}
+            {choosenDeck===3 ? (<></>) : (deck[choosenDeck].map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} />))}
         </div>
     );
 };
