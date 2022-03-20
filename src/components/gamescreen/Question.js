@@ -11,41 +11,46 @@ export default function Question(props){
     const [color, setColor] = useState("black"); ///baclk yellow red
 
     
-    function QuestionNumSide(props){
-        const css = `question-box ${props.color}`;
-        const text = `Pergunta ${props.num+1}`;
+    function QuestionNumSide(){
+        const css = `question-box ${color}`;
+        const text = `Pergunta ${number+1}`;
         function validateClick(color){
             if (color === "black"){
-                props.setTurned(true);
+                setTurned(true);
             }
         } 
         return(
             <div className={css}>
                 <p>{text}</p>
-                <ion-icon name="chevron-forward-outline" onClick={()=>validateClick(props.color)}></ion-icon>
+                <ion-icon name="chevron-forward-outline" onClick={()=>validateClick(color)}></ion-icon>
             </div>
         );
     }
 
-    function QuestionCardSide(props){
+    function QuestionCardSide(){
         return(
-            props.face === "question" ? (<QuestionSide question={props.question} setFace={props.setFace}/>) : (<AnswerSide face={props.face} answer={props.answer} setColor={props.setColor} setFace={props.setFace} setTurned={props.setTurned}/>)
+            face === "question" ? (<QuestionSide question={question} setFace={setFace}/>) : (<AnswerSide face={face} answer={answer} setColor={setColor} setFace={setFace} setTurned={setTurned}/>)
         );
     }
 
-    function QuestionSide(props){
+    function QuestionSide(){
         return(
             <div className="question-card-side card-side">
-                <p>{props.question}</p>
-                <img className="setinha" src={setinha} onClick={()=>props.setFace("answer")} />
+                <p>{question}</p>
+                <img className="setinha" src={setinha} onClick={()=>setFace("answer")} />
             </div>
         );
     }
 
-    function AnswerSide(props){
+    function AnswerSide(){
         return(
             <div className="answer-card-side card-side">
-                <p>{props.answer}</p>
+                <p>{answer}</p>
+                <div className="button-box">
+                    <button className="red-button answer-button">Não lembrei</button>
+                    <button className="yellow-button answer-button">Quase não lembrei</button>
+                    <button className="green-button answer-button">Zap!</button>
+                </div>
             </div>
         );
     }

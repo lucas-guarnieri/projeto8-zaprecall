@@ -189,3 +189,42 @@ body {
     bottom: 10px;
     right: 15px;
 }
+
+.button-box {
+    position: absolute;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    bottom: 6px;
+    left: 13px;
+}
+
+.answer-button {
+    height: 37px;
+    width: 85px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.red-button {
+    background-color: #FF3030;
+}
+
+.yellow-button {
+    background-color: #FF922E;
+    margin: 0 8px;
+}
+
+.green-button {
+    background-color: #2FBE34;
+}
+
+
+
