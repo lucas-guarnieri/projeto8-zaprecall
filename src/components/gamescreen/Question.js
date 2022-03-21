@@ -4,8 +4,8 @@ import setinha from "./../../img/setinha.png";
 export default function Question(props){
     const {number, question, answer, progressList, setProgressList, wrongAns, setWrongAns} = props;
     const [turned, setTurned] = useState(false);
-    const [face, setFace] = useState("question"); ///question answer
-    const [color, setColor] = useState("black"); ///black red yellow green
+    const [face, setFace] = useState("question"); //states: question answer
+    const [color, setColor] = useState("black"); //states: black red yellow green
     
     function QuestionNumSide(){
         const css = `question-box ${color}`;

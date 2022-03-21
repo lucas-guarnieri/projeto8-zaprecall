@@ -36,7 +36,6 @@ export default function ProgressBar(props){
         return (rightAns >= goal ? (<Party />) : (<Sad />))
     }
     
-
     return(
         <div className="progress-bar">
             {progressList.length<8 ? (<></>) : (<EndMessage />)}
