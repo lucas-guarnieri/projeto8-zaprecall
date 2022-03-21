@@ -2,7 +2,7 @@ import { useState } from "react";
 import setinha from "./../../img/setinha.png";
 
 export default function Question(props){
-    const {number, question, answer, progressList, setProgressList} = props;
+    const {number, question, answer, progressList, setProgressList, wrongAns, setWrongAns} = props;
     const [turned, setTurned] = useState(false);
     const [face, setFace] = useState("question"); ///question answer
     const [color, setColor] = useState("black"); ///black red yellow green
@@ -74,6 +74,7 @@ export default function Question(props){
     }
 
     function changeToRed(){
+        setWrongAns(wrongAns + 1);
         setColor("red");
         setTurned(false);
         setProgressList([...progressList, <div className="red-icon" key={progressList.length}> <ion-icon name="close-circle"></ion-icon></div>]);
@@ -99,7 +100,3 @@ export default function Question(props){
     );
 
 } 
-
-//{turned ? (<p>Pergunta </p>) : 
-//(<p>Pergunta #</p>)}
-//(<QuestionCard face = {face}/>)

@@ -1,7 +1,7 @@
 import Question from "./Question";
 
 export default function QuestionsBox(props){
-    const {choosenDeck, progressList, setProgressList} = props;
+    const {choosenDeck, progressList, setProgressList, wrongAns, setWrongAns} = props;
     
     let deck = [
         [{question:"O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
@@ -23,10 +23,9 @@ export default function QuestionsBox(props){
         {question:"7x7", answer: "49"}
         ]
     ]
-
     return(
         <div className="questions-box">
-            {choosenDeck===3 ? (<></>) : (deck[choosenDeck].map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} progressList={progressList} setProgressList={setProgressList}/>))}
+            {choosenDeck===3 ? (<></>) : (deck[choosenDeck].sort(() => Math.random() - 0.5).map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} progressList={progressList} setProgressList={setProgressList} wrongAns={wrongAns} setWrongAns={setWrongAns}/>))}
         </div>
     );
 };

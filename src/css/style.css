@@ -103,7 +103,6 @@ body {
     line-height: 45px;
     color: #FFFFFF;
     margin: 30px 0;
-    
 }
 
 .game-logo img {
@@ -124,7 +123,6 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none;
-    margin-bottom: 70px;
 }
 
 .questions-box::-webkit-scrollbar {
@@ -178,7 +176,7 @@ body {
 .card-side {
     position: relative;
     display: flex;
-    height: 131px;
+    height: 151px;
     width: 300px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -242,11 +240,8 @@ body {
 }
 
 .progress-bar {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
-    height: 70px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,4 +275,44 @@ body {
     font-size: 18px;
 }
 
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigger {
+    height: 171px;
+}
+
+@media only screen and (min-width: 600px) {
+    .bigger {
+        height: 400px;
+    }
+    .game-logo {
+        font-family: 'Righteous';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        color: #FFFFFF;
+        margin: 5px 0;
+    }
+    .progress-bar {
+        width: 100%;
+        min-height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+        font-family: 'Recursive';
+        font-style: normal;
+        font-size: 15px;
+        line-height: 28px;
+    }
+  }
 
