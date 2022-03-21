@@ -1,10 +1,13 @@
+import { useState } from "react";
+
 import party from "./../../img/party.png";
 import sad from "./../../img/sad.png";
 
 export default function ProgressBar(props){
+    const [css, setCss] = useState("progress-bar")
     const {goal, progressList, wrongAns} = props;
     function Party(){
-        document.querySelector(".progress-bar").classList.add("bigger");
+        setCss("progress-bar bigger");
         return(
             <>
             <div className="top">
@@ -18,7 +21,7 @@ export default function ProgressBar(props){
         );
     }
     function Sad(){
-        document.querySelector(".progress-bar").classList.add("bigger");
+        setCss("progress-bar bigger");
         return(
             <>
             <div className="top">
@@ -37,7 +40,7 @@ export default function ProgressBar(props){
     }
     
     return(
-        <div className="progress-bar">
+        <div className={css}>
             {progressList.length<8 ? (<></>) : (<EndMessage />)}
             <p>{progressList.length}/8 CONCLUÍDOS</p>
             <div className="image-list">{progressList.length === 0 ? (<></>) : (<div className="image-list">{progressList}</div>)}</div>
