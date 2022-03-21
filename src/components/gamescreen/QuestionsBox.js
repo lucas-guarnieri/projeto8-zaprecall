@@ -1,10 +1,7 @@
 import Question from "./Question";
 
-
-
 export default function QuestionsBox(props){
-    const {choosenDeck} = props;
-     
+    const {choosenDeck, progressList, setProgressList} = props;
     
     let deck = [
         [{question:"O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
@@ -29,7 +26,7 @@ export default function QuestionsBox(props){
 
     return(
         <div className="questions-box">
-            {choosenDeck===3 ? (<></>) : (deck[choosenDeck].map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} />))}
+            {choosenDeck===3 ? (<></>) : (deck[choosenDeck].map((card, index) => <Question key={index} number={index} question={card.question} answer={card.answer} progressList={progressList} setProgressList={setProgressList}/>))}
         </div>
     );
 };

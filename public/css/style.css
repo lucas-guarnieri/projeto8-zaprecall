@@ -124,6 +124,7 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none;
+    margin-bottom: 70px;
 }
 
 .questions-box::-webkit-scrollbar {
@@ -157,6 +158,21 @@ body {
 
 .black ion-icon {
     cursor: pointer;
+}
+
+.red {
+    color: #FF3030;
+    text-decoration-line: line-through;
+}
+
+.yellow {
+    color: #FF922E;
+    text-decoration-line: line-through;
+}
+
+.green {
+    color: #2FBE34;
+    text-decoration-line: line-through;
 }
 
 .card-side {
@@ -193,7 +209,6 @@ body {
 .button-box {
     position: absolute;
     display: flex;
-    
     align-items: center;
     justify-content: center;
     bottom: 6px;
@@ -226,5 +241,43 @@ body {
     background-color: #2FBE34;
 }
 
+.progress-bar {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    font-family: 'Recursive';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.image-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-icon {
+    color:#FF3030;
+    font-size: 18px;
+}
+
+.yellow-icon {
+    color:#FF922E;
+    font-size: 18px;
+}
+
+.green-icon {
+    color:#2FBE34;
+    font-size: 18px;
+}
 
 
